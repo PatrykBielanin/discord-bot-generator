@@ -1,14 +1,15 @@
+import Vue from "vue";
 import Vuex from "vuex";
-import commandsModule from "./modules/commands";
-import configModule from "./modules/configuration";
+import { createStore } from 'vuex-extensions'
+import config from "../components/pages/config/vuex";
+import commands from "../components/pages/commands/vuex";
 
-const createStore = () => {
-  return new Vuex.Store({
+Vue.use(Vuex)
+
+export default createStore(Vuex.Store, {
     modules: {
-      module1: configModule,
-      module2: commandsModule
+      config,
+      commands
     }
-  });
-};
+})
 
-export default createStore;

@@ -3,24 +3,28 @@
         <h1>CONFIGURE BOT</h1>
         <p>Add required basic configuration to your bot | <small>it will be saved in package.json</small> </p>
 
-        <ConfigItem
-            v-for="config in configuration"
-            :key="config.label"
-            :type="config.type"
-            :label="config.label"
-            :placeholder="config.placeholder"
-        />
+        <form @submit.prevent>
+            <ConfigItem
+                v-for="config in configuration"
+                :key="config.label"
+                :type="config.type"
+                :label="config.label"
+                :placeholder="config.placeholder"
+            />
+
+            <button>SAVE</button>
+        </form>
 
         <ConfigList />
 
 
-        <button @submit.prevent>SAVE</button>
+
     </div>
 </template>
 
 <script>
-    import ConfigItem from '@/components/pages/config/ConfigItem'
-    import ConfigList from '@/components/pages/config/ConfigList'
+    import ConfigItem from '@/components/pages/config/components/ConfigItem'
+    import ConfigList from '@/components/pages/config/components/ConfigList'
 
     export default {
         name: "Config",
@@ -33,32 +37,32 @@
                 configuration: [
                     {
                         type: 'text',
-                        label: 'Bot name',
+                        label: 'name',
                         placeholder: 'First bot'
                     },
                     {
                         type: 'text',
-                        label: 'Description',
+                        label: 'description',
                         placeholder: 'Pointless bot for discord'
                     },
                     {
                         type: 'text',
-                        label: 'Author',
+                        label: 'author',
                         placeholder: 'bielak'
                     },
                     {
                         type: 'text',
-                        label: 'Version',
+                        label: 'version',
                         placeholder: '1.0.0'
                     },
                     {
                         type: 'text',
-                        label: 'Token',
+                        label: 'token',
                         placeholder: 'ZXCVBN14AX5234ZXCV1'
                     },
                     {
                         type: 'text',
-                        label: 'Prefix',
+                        label: 'prefix',
                         placeholder: '?'
                     },
                 ]

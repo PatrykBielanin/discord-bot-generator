@@ -11,8 +11,10 @@
     "dependencies": {
         "core-js": "^3.6.5",
         "vue": "^2.6.11",
+        "vue-js-modal": "^2.0.1",
         "vue-router": "^3.2.0",
-        "vuex": "^3.4.0"
+        "vuex": "^3.4.0",
+        "vuex-extensions": "^4.0.0"
     },
     "devDependencies": {
         "@vue/cli-plugin-babel": "~4.5.0",

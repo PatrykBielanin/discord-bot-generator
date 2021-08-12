@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomeIntro from "@/components/pages/home/HomeIntro.vue";
+import HomeIntro from "@/components/pages/home/components/HomeIntro.vue";
 
 export default {
   name: "Home",

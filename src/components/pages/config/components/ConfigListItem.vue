@@ -1,7 +1,7 @@
 <template>
-    <div class="listItem" v-if="option.length > 1">
-        <p>{{option}} <span>{{value ? value : 'empty'}}</span></p>
-    </div>
+    <li class="listItem">
+        <p>{{option[0].toUpperCase() + option.slice(1)}}: <span>{{value ? value : '----'}}</span></p>
+    </li>
 </template>
 
 <script>

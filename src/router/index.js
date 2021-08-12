@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Config from '../views/Config.vue'
+import Commands from '../views/Commands.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     path: '/config',
     name: 'Config',
     component: Config
+  },
+  {
+    path: '/commands',
+    name: 'Commands',
+    component: Commands
   }
 ]
 
