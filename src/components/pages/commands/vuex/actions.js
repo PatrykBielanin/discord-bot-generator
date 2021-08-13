@@ -7,6 +7,6 @@ export const saveSimpleCommand = ({ commit }, {payload}) => {
   }
 
   export const deleteCommand = ({ commit }, {payload}) => {
-    commit('deleteCommand', {payload})
+    commit('deleteCommand', {name: payload.name})
 }
 

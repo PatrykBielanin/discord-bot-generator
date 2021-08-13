@@ -3,11 +3,12 @@
         <p>Commands: </p>
         <ul>
             <CommandItem
-                v-for="command in commands"
+                v-for="(command, index) in commands"
                 :key="command.name"
                 :name="command.name"
                 :type="command.type"
                 :response="command.response"
+                :index="index"
             />
         </ul>
     </div>

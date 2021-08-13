@@ -7,7 +7,7 @@ export const saveSimpleCommand = (state, {type, name, response}) => {
 }
 
 export const deleteCommand = (state, {name}) => {
-    let current = state.commands.list.filter( c => c.name == name )
-    console.log(current[0])
-    // current[0].splice(-1)
+    let command = state.commands.list.indexOf(toString(name))
+    console.log(command)
+    state.commands.list.splice(command[0], 1)
 }

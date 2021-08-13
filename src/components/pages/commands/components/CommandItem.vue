@@ -13,7 +13,7 @@
 
     export default {
         name: "CommandsItem",
-        props: ['name', 'type', 'response'],
+        props: ['name', 'type', 'response', 'index'],
         data(){
             return{
                 editsimpleCommandModal
@@ -24,12 +24,12 @@
                 deleteCommand: 'commands/deleteCommand'
             }),
             del(name){
-                this.deleteCommand({name})
+                this.deleteCommand({payload:{ name }})
             }
         }
     }
 </script>
 
 <style lang="sass" scoped>
-    // @import '@/assets/sass/pages/configList.sass'
+    @import '@/assets/sass/pages/commandItem.sass'
 </style>
