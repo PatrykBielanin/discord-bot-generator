@@ -5,8 +5,23 @@
             :key="i.name"
             @click="$modal.show(i.modal)"
         >
-            >{{i.name}}
-            <span>preview</span>
+            <span
+                v-if="i.disabled"
+                v-tooltip="'Not available'"
+                style="color: lightgray"
+            >
+                {{i.name}}
+                <span> preview</span>
+            </span>
+
+            <span
+                v-else
+                v-tooltip="'Click to create'"
+            >
+                {{i.name}}
+                <span> preview</span>
+            </span>
+
         </p>
     </div>
 </template>
@@ -21,12 +36,14 @@
                     {
                         name: "Simple text bot response",
                         modal: simpleCommandModal,
-                        preview: ""
+                        preview: "",
+                        disabled: false
                     },
                     {
                         name: "Embed message",
                         modal: "embedCommandModal",
-                        preview: ""
+                        preview: "",
+                        disabled: true
                     }
                 ]
             }

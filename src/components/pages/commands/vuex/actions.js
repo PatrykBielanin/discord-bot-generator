@@ -5,3 +5,8 @@ export const saveSimpleCommand = ({ commit }, {payload}) => {
           response: payload.response
       })
   }
+
+  export const deleteCommand = ({ commit }, {payload}) => {
+    commit('deleteCommand', {payload})
+}
+

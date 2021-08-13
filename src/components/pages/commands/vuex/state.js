@@ -1,5 +1,11 @@
 export default {
     commands: {
-        list: []
+        list: [
+            {
+                name: "Elko",
+                type: "simple",
+                response: "naura"
+            }
+        ]
     }
 }
